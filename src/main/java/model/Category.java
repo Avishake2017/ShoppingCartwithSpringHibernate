@@ -5,6 +5,7 @@ import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -14,7 +15,8 @@ public class Category {
 			private int category_id;
 			private String category_name;
 			private String category_description;
-			private Set<Product> category_details = new HashSet<Product>();
+			@OneToMany
+			private Set<Product> category_details ;
 			
 			@GeneratedValue
 			public int getCategory_id() {

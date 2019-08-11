@@ -2,6 +2,7 @@ package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -11,8 +12,9 @@ public class Product {
 	private int product_id;
 	private int product_name;
 	private int product_description;
-	
-			public int getProduct_id() {
+	@ManyToOne
+	private Category category;
+	public int getProduct_id() {
 		return product_id;
 	}
 	public void setProduct_id(int product_id) {
