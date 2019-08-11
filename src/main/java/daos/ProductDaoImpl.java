@@ -18,10 +18,10 @@ public class ProductDaoImpl implements ProductDao{
 private SessionFactory sessionFactory;
 
 	public boolean addProduct(Product product) {
-		Session session = sessionFactory.getCurrentSession();
 		try {
+		Session session = sessionFactory.getCurrentSession();
 				session.save(product);
-			
+				
 			
 			
 			
