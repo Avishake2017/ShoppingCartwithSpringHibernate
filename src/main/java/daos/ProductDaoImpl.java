@@ -20,7 +20,9 @@ public class ProductDaoImpl implements ProductDao{
 
 	public boolean addProduct(Product product) {
 		try {
-		Session session = sessionFactory.openSession();
+			System.out.println("Before session Factory");
+		Session session = sessionFactory.getCurrentSession();
+		System.out.println("After session Factory");
 				session.save(product);
 				return true;
 		}catch(Exception e) {

@@ -16,7 +16,7 @@ public class Category {
 			private int category_id;
 			private String category_name;
 			private String category_description;
-			@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+			@OneToMany
 			private Set<Product> category_details ;
 			
 			@GeneratedValue
