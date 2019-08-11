@@ -17,8 +17,14 @@ public class Category {
 			private String category_name;
 			private String category_description;
 			@OneToMany
-			private Set<Product> category_details ;
+			private Set<Product> prod;
 			
+			public Set<Product> getProd() {
+				return prod;
+			}
+			public void setProd(Set<Product> prod) {
+				this.prod = prod;
+			}
 			@GeneratedValue
 			public int getCategory_id() {
 				return category_id;

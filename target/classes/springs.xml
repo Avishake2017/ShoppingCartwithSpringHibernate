@@ -16,9 +16,8 @@
   			http://www.springframework.org/schema/tx 
   			http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<context:component-scan base-package = "com.model"/> 
-	<context:component-scan base-package = "com.dbconfig"/> 
-   <context:component-scan base-package = "com.daos"/>
+	<context:component-scan base-package = "com.shopping.dbconfig"/> 
+   <context:component-scan base-package = "com.shopping.daos"/>
    
    
    </beans>
