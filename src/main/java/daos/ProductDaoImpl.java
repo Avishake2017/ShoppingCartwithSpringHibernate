@@ -16,11 +16,11 @@ import model.Product;
 @Transactional
 public class ProductDaoImpl implements ProductDao{
 @Autowired
-private SessionFactory sessionFactory;
+ SessionFactory sessionFactory;
 
 	public boolean addProduct(Product product) {
 		try {
-		Session session = sessionFactory.getCurrentSession();
+		Session session = sessionFactory.openSession();
 				session.save(product);
 				return true;
 		}catch(Exception e) {
