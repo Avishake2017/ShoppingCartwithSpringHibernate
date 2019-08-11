@@ -2,6 +2,7 @@ package model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,7 +16,7 @@ public class Category {
 			private int category_id;
 			private String category_name;
 			private String category_description;
-			@OneToMany
+			@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
 			private Set<Product> category_details ;
 			
 			@GeneratedValue
