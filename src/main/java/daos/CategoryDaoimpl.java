@@ -15,7 +15,6 @@ import model.Category;
 @Transactional
 public class CategoryDaoimpl implements CategoryDao{
 	@Autowired
-
 	private SessionFactory sessionFactory;
 	public boolean addCategory(Category category) {
 		try {
@@ -28,7 +27,6 @@ public class CategoryDaoimpl implements CategoryDao{
 		}
 		return false;
 	}
-
 	public List<Category> getAllCategory() {
 		try {
 			Session session = sessionFactory.getCurrentSession();
@@ -43,6 +41,16 @@ public class CategoryDaoimpl implements CategoryDao{
 	public boolean deleteCategory(Category category) {
 		
 		return false;
+	}
+	public Category viewCategorybyId(int id) {
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			 
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }
