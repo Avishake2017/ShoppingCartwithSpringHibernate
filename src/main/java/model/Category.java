@@ -1,15 +1,22 @@
 package model;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Category")
 public class Category {
 			@Id
 			private int category_id;
 			private String category_name;
 			private String category_description;
+			private Set<Product> category_details = new HashSet<Product>();
 			
+			@GeneratedValue
 			public int getCategory_id() {
 				return category_id;
 			}
