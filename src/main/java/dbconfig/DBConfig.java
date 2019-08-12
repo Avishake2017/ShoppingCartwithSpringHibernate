@@ -32,10 +32,10 @@ package dbconfig;
 		}
 		
 		@Bean(name="sessionFactory")  //java.util
-		public SessionFactory getSessionFactory()
+		public  SessionFactory getSessionFactory()
 		{
 			
-			Properties p=new Properties();
+		Properties p=new Properties();
 			p.setProperty("hibernate.dialect","org.hibernate.dialect.OracleDialect");
 			p.setProperty("hibernate.hbm2ddl.auto","update");
 			p.setProperty("hibernate.show_sql", "true");
@@ -44,7 +44,9 @@ package dbconfig;
 			sb.addProperties(p);
 			sb.scanPackages("com.shopping.model");
 			
-			return sb.buildSessionFactory();		
+			return sb.buildSessionFactory();	
+			
+			
 		}
 
 		@Bean(name="HibernateTranscation")

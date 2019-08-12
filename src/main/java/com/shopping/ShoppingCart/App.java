@@ -29,7 +29,7 @@ public class App
       
       pd.addProduct(product);
        
-       /*Product product1 = new Product();
+       Product product1 = new Product();
        product1.setProduct_id(2);
        product1.setProduct_name("Trimmer");
        product1.setProduct_description("Shaving Product");
@@ -38,7 +38,6 @@ public class App
        product2.setProduct_id(3);
        product2.setProduct_name("Dell");
        product2.setProduct_description("Laptop");
-       */
       
        
     }
