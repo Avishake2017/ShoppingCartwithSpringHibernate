@@ -24,7 +24,6 @@ package dbconfig;
 		@Bean(name="dataSource")
 		public DataSource getDataSource()   //java.sql
 		{
-			System.out.println("I m Data source");
 			dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
 			dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
 			dataSource.setUsername("hr");
@@ -35,7 +34,7 @@ package dbconfig;
 		@Bean(name="sessionFactory")  //java.util
 		public SessionFactory getSessionFactory()
 		{
-			System.out.println("I m getSessionFactory");
+			
 			Properties p=new Properties();
 			p.setProperty("hibernate.dialect","org.hibernate.dialect.OracleDialect");
 			p.setProperty("hibernate.hbm2ddl.auto","update");

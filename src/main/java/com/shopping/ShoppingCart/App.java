@@ -18,10 +18,11 @@ public class App
        Category category = new Category();
        
        category.setCategory_name("Electronics");
+       System.out.println("Inside Main App");
        category.setCategory_description("Electronics Product");
        
        Product product  = new Product();
-       
+       System.out.println("Inside Main App after product object creation");
        product.setProduct_name("XBox One");
        product.setProduct_description("Gaming Console");
       product.setCategory(category);

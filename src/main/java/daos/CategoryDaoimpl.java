@@ -22,6 +22,7 @@ public class CategoryDaoimpl implements CategoryDao{
 	
 	public boolean addCategory(Category category) {
 		try {
+			System.out.println("Before session factory of Category dao");
 			Session session = sessionFactory.getCurrentSession();
 			session.save(category);
 			return true;

@@ -17,7 +17,7 @@ import model.Product;
 @Transactional
 public class ProductDaoImpl implements ProductDao{
 @Autowired
- SessionFactory sessionFactory;
+ private SessionFactory sessionFactory;
 
 	public boolean addProduct(Product product) {
 		try {
